@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de cadastro de produtos</title>
+</head>
+<body>
+    <h1>Sistema de cadastro de novos produtos</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+        <label>Tipo do Produto:</label>
+        <input type="tipo" name="tipo" required="required" type="type" placeholder="ex. Pneu"/>
+        </p>
+
+        <p>
+        <label>Quantidade:</label>
+        <input type="quantidade" name="qtd" required="required" type="quantos" placeholder="ex. 1"/>
+        </p>
+
+        <p>
+        <label>Marca:</label>
+        <input type="marca" name="marca" required="required" type="mark" placeholder="ex. Bridgestone"/>
+        </p>
+
+        <p>
+        <label>Modelo:</label>
+        <input type="modelo" name="modelo" required="required" type="model" placeholder="ex. Pneus On-road"/>
+        </p>
+
+        <p>
+        <label>Código do Produto:</label>
+        <input type="código" name="cód" required="required" type="number" placeholder="ex. 0121"/>
+        </p>
+        <p>
+        <label>Medida/Tamanho:</label>
+        <input type="medida/tamanho" name="medida/tamanho" required="required" type="number" placeholder="ex. Aro 12"/>
+        </p>
+        <p>
+        <input type="submit" value="Cadastrar produto">
+    </form>
+
+    <p>Produtos cadastrados:</p>
+
+</body>
+</html>
