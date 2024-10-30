@@ -1,1 +1,50 @@
-
+!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Login e Registro com HTML5 e CSS3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+     
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action=""> 
+          <h1>Login</h1> 
+          <p> 
+            <label for="razão_social">Razão Social</label>
+            <input id="razão_social" name="razão_social" required="required" type="text" placeholder="ex. Empresa DM Ltda."/>
+          </p>
+           
+          <p> 
+            <label for="cnpj">CNPJ</label>
+            <input id="cnpj" name="cnpj" required="required" type="password" placeholder="ex.XXX/0001-XX" /> 
+          </p>
+          <p> 
+            <label for="fone">Telefone</label>
+            <input id="fone" name="fone" required="required" type="password" placeholder="ex. 49 99998888" /> 
+          </p> 
+          <p> 
+            <label for="Endereço">Rua</label>
+            <input id="endereço" name="endereço" required="required" type="password" placeholder="ex. Rua Carolina" /> 
+          </p>
+          <p> 
+            <label for="Endereço">CEP</label>
+            <input id="endereço" name="email_login" required="required" type="password" placeholder="ex.  01001-000" /> 
+          </p>
+           
+          <p> 
+            <input type="submit" value="Logar" /> 
+          </p>
+           
+          <p class="link">
+            Ainda não tem conta?
+            <a href="#paracadastro">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+ 
