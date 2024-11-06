@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <script>
+        var isCoordenador = false; 
+        function toggleAlert() {
+            var alertDiv = document.getElementById('alertaEstoque');
+            if (alertDiv.style.display === "none" || alertDiv.style.display === "") {
+                alertDiv.style.display = "block";
+            } else {
+                alertDiv.style.display = "none";
+            }
+        }
+
+        function verificarPermissao() {
+            if (isCoordenador) {
+                document.getElementById('nivel-minimo').disabled = false; 
+                document.getElementById('alterar-botao').disabled = false; 
+            } else {
+                document.getElementById('nivel-minimo').disabled = true; 
+                document.getElementById('alterar-botao').disabled = true; 
+            }
+        }
+
+        window.onload = function() {
+            verificarPermissao();
+        }
+    </script>
+</head>
+<body>
+
+    <div>
+        <h2>ALERTA DE ESTOQUE</h2>
+        <p>CUIDADO!!</p>
+    </div>
+
+    <a href="#" class="ALERTA DE ESTOQUE" onclick="toggleAlert()">
+        <span> NÍVEL MÍNIMO DE ESTOQUE!! </span>
+        <span class="badge"></span>
+    </a>
+
+    <div id="alertaEstoque" style="display:none; margin-top: 20px;">
+        <h2>Alertas de Estoque</h2>
+        <div style="border: 1px solid red; padding: 10px; margin-bottom: 15px;">
+            <p><strong>Produto:</strong> Produto A</p>
+            <p><strong>Estoque Atual:</strong> 5 unidades</p>
+            <p><strong>Nível Mínimo:</strong> 10 unidades</p>
+            <p><strong>Alerta:</strong> Estoque abaixo do mínimo!</p>
+        </div>
+        <div style="border: 1px solid red; padding: 10px; margin-bottom: 15px;">
+            <p><strong>Produto:</strong> Produto B</p>
+            <p><strong>Estoque Atual:</strong> 3 unidades</p>
+            <p><strong>Nível Mínimo:</strong> 5 unidades</p>
+            <p><strong>Alerta:</strong> Estoque abaixo do mínimo!</p>
+        </div>
+    </div>
+
+    <form action="#">
+        <label for="produto">Produto:</label>
+        <select id="produto" name="produto">
+            <option value="produto_a">Produto A</option>
+            <option value="produto_b">Produto B</option>
+        </select>
+        <br><br>
+        <label for="nivel-minimo">Nível Mínimo de Estoque:</label>
+        <input type="number" id="nivel-minimo" name="nivel-minimo" min="1" value="10" disabled>
+        <br><br>      
+    </form>
+
+</body>
+</html>
